@@ -40,7 +40,7 @@ body {
     background-color: #ffffff;
     color: var(--text-dark);
     padding-top: 40px;
-    padding-bottom: 20;
+    padding-bottom: 20px;
     overflow: hidden;
 }
 
@@ -184,11 +184,15 @@ text-decoration: none;
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--accent-peach);
+    margin-top: 10px;
+    padding: 10px;
+    
 }
 
 .social-icons {
     display: flex;
     gap: 15px;
+    margin-top: -15px;
 }
 
 .social-icons a {
