@@ -115,7 +115,7 @@ text-decoration: none;
 }
 
 .nav-links a:hover {
-color: var(--accent-peach);
+    color: var(--accent-peach);
     transform: translateY(-1px);
 }
 
@@ -229,7 +229,7 @@ color: var(--accent-peach);
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
 }
 
 .profile-photo {
@@ -357,6 +357,10 @@ color: var(--accent-peach);
     font-size: 1.3rem;
     font-weight: 800;
     margin-bottom: 20px;
+    color: var(--bg-dark);
+}           
+
+.email-address:hover {
     color: var(--accent-peach);
 }
 
