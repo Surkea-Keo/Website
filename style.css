@@ -434,3 +434,46 @@ text-decoration: none;
         gap: 20px;
     }
 }
+
+}
+
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.progress-box {
+  width: 260px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  border-radius: 10px;
+  transition: width 0.2s ease-out;
+  box-shadow: 0 0 12px #00f2fe;
+}
+
+.counter {
+  margin-top: 14px;
+  font-family: monospace;
+  font-size: 1rem;
+  color: #9ca3af;
+}
