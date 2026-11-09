@@ -6,15 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const questionBtn = item.querySelector('.faq-question');
 
         questionBtn.addEventListener('click', () => {
-            // Check if current item is already active
             const isActive = item.classList.contains('active');
 
-            // Close all open FAQs
             faqItems.forEach(otherItem => {
                 otherItem.classList.remove('active');
             });
 
-            // If it wasn't active, open it
             if (!isActive) {
                 item.classList.add('active');
             }
@@ -27,23 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const counter = document.getElementById("loading-counter");
   const loadingScreen = document.getElementById("loading-screen");
 
-  // Gather all images and stylesheets on the page
-  const assets = document.querySelectorAll("img, link[rel='stylesheet'], script");
-  let totalAssets = assets.length;
-  let loadedCount = 0;
   let currentPercentage = 0;
-  let targetPercentage = 0;
+  let targetPercentage = 10; // Start moving immediately
 
-  // If the page has zero trackable assets, simulate a smooth quick load
-  if (totalAssets === 0) {
-    totalAssets = 1;
-    loadedCount = 1;
-  }
-
-  // Function to update the visual width and text
   function updateProgress() {
     // Smoothly glide current percentage towards the target percentage
-    currentPercentage += (targetPercentage - currentPercentage) * 0.1;
+    currentPercentage += (targetPercentage - currentPercentage) * 0.15;
     
     const displayVal = Math.round(currentPercentage);
     progressBar.style.width = `${displayVal}%`;
@@ -55,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       counter.textContent = "100%";
       setTimeout(() => {
         loadingScreen.classList.add("hidden");
-      }, 300);
+      }, 200);
       return;
     }
 
@@ -64,27 +50,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   requestAnimationFrame(updateProgress);
 
-  // Track each asset as it loads
-  function assetLoaded() {
-    loadedCount++;
-    targetPercentage = Math.floor((loadedCount / totalAssets) * 100);
-  }
-
-  assets.forEach(asset => {
-    if (asset.tagName === "IMG") {
-      if (asset.complete) {
-        assetLoaded();
-      } else {
-        asset.addEventListener("load", assetLoaded);
-        asset.addEventListener("error", assetLoaded); // Count errors too so it doesn't freeze
-      }
-    } else {
-      assetLoaded();
-    }
+  // Ramp up progress as page elements load
+  window.addEventListener("load", () => {
+    targetPercentage = 100;
   });
 
-  // Fallback: Force finish after 2 seconds no matter what (prevents permanent hanging)
+  // Absolute safety fallback: Force complete after 1.5 seconds no matter what
   setTimeout(() => {
     targetPercentage = 100;
-  }, 2000);
+  }, 1500);
 });
