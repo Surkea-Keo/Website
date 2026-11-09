@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="logopages.png" type="image/x-icon">
-
 </head>
 <body>
 
@@ -20,13 +19,13 @@
     <header id="hero-header" class="hero-header">
         <div class="grid-background"></div>
         <nav class="navbar">
-            <div class="logo">&lt;website&gt;Surkea&lt;/website&gt;</div>
             <ul class="nav-links">
                 <li><a href="#hero-header">HOME</a></li>
                 <li><a href="#travel">TRAVEL</a></li>
                 <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
+            <div class="logo">&lt;website&gt;Surkea&lt;/website&gt;</div>
         </nav>
 
         <section id="home" class="hero-content">
@@ -39,9 +38,8 @@
                     Interest in science, Sport, Video games, Movies, Music, Coding, Adventure, Survival, Astrophile, Astronomer, Sky Gazer, Space Enthusiast, Animal lover, Nature lover.
                 </p>
 
-                <p class="social-label">Find me</p>
-        
-            <div class="hero-socials">
+                <div class="hero-socials">
+                    <p class="social-label">Find me</p>
                     <div class="social-icons">
                         <a href="https://www.instagram.com/surkea.keo/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/Surkea.keo" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -54,7 +52,6 @@
 
             <div class="hero-image-container">
                 <div class="avatar-frame">
-                    <!-- Replace avatar.png with your main profile image path -->
                     <img src="surkea2.jpg" alt="Surkea Keo Profile Photo" class="profile-photo">
                 </div>
             </div>
@@ -68,7 +65,6 @@
 
             <div class="travel-card">
                 <div class="travel-img-wrapper">
-                    <!-- Replace with photo 1 -->
                     <img src="cycling-border.jpg.jpg" alt="Cycling to Cambodia-Vietnam border">
                 </div>
                 <div class="travel-info">
@@ -78,7 +74,6 @@
 
             <div class="travel-card">
                 <div class="travel-img-wrapper">
-                    <!-- Replace with photo 2 -->
                     <img src="cycling-stung-treng.jpg.jpg" alt="Cycling to Stung Treng Province">
                 </div>
                 <div class="travel-info">
@@ -97,27 +92,27 @@
                 <div class="faq-item">
                     <button class="faq-question">
                         <span>How do you feel about having your own website?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>It feels great and empowering to have a personal corner on the web to showcase my journey, projects, and adventures! +99999999aura </p>
+                        <p>It feels great and empowering to have a personal corner on the web to showcase my journey, projects, and adventures! +99999999aura</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
                         <span>How did you make your own website?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>I designed and coded it using HTML5, CSS3 for custom styling, and JavaScript for dynamic interactions and Gemini. </p>
+                        <p>I designed and coded it using HTML5, CSS3 for custom styling, and JavaScript for dynamic interactions and Gemini.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
                         <span>Are you a freelancer?</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
                         <p>No, I'm just making it for my personal use.</p>
@@ -127,7 +122,7 @@
                 <div class="faq-item">
                     <button class="faq-question">
                         <span>Can you make a website for me? (My friend is gonna ask me)</span>
-                        <i class="fas fa-chevron-down faq-icon"></i>
+                        <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
                         <p>No, it takes a lot of time to make it</p>
@@ -154,10 +149,10 @@
     </footer>
 
     <div id="loading-screen">
-    <div class="progress-box">
-        <div class="progress-bar" id="progress-bar"></div>
-    </div>
-    <div class="counter" id="loading-counter">0%</div>
+        <div class="progress-box">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="counter" id="loading-counter">0%</div>
     </div>
     
     <script src="script.js"></script>
