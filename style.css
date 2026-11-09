@@ -414,7 +414,7 @@ body {
 .contact-me {
     font-family: var(--font-heading);
     font-size: 1.8rem;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     font-weight: 700;
     color: var(--text-dark);
 }
