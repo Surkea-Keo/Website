@@ -21,3 +21,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Simulates / tracks progress percentage smooth transition
+let progress = 0;
+const progressBar = document.getElementById('progress-bar');
+const counter = document.getElementById('loading-counter');
+
+const interval = setInterval(() => {
+  progress += Math.floor(Math.random() * 15) + 5;
+  if (progress >= 100) {
+    progress = 100;
+    clearInterval(interval);
+    setTimeout(() => {
+      document.getElementById('loading-screen').classList.add('hidden');
+    }, 300);
+  }
+  progressBar.style.width = `${progress}%`;
+  counter.textContent = `${progress}%`;
+}, 100);
