@@ -22,20 +22,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Simulates / tracks progress percentage smooth transition
-let progress = 0;
-const progressBar = document.getElementById('progress-bar');
-const counter = document.getElementById('loading-counter');
-
-const interval = setInterval(() => {
-  progress += Math.floor(Math.random() * 15) + 5;
-  if (progress >= 100) {
-    progress = 100;
-    clearInterval(interval);
-    setTimeout(() => {
-      document.getElementById('loading-screen').classList.add('hidden');
-    }, 300);
+// Function to hide the loading screen safely
+function hideLoadingScreen() {
+  const loadingScreen = document.getElementById('loading-screen');
+  if (loadingScreen && !loadingScreen.classList.contains('hidden')) {
+    loadingScreen.classList.add('hidden');
   }
-  progressBar.style.width = `${progress}%`;
-  counter.textContent = `${progress}%`;
-}, 100);
+}
+
+// 1. Try hiding when DOM is ready (faster than full window load)
+document.addEventListener('DOMContentLoaded', () => {
+  setTimeout(hideLoadingScreen, 500);
+});
+
+// 2. Fallback: Force hide after 1.5 seconds guaranteed (prevents Facebook in-app browser lockups)
+window.addEventListener('load', () => {
+  setTimeout(hideLoadingScreen, 300);
+});
+
+// Ultimate safety net: Absolute maximum timeout
+setTimeout(hideLoadingScreen, 1500);
