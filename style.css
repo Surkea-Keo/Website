@@ -244,9 +244,9 @@ body {
 }
 
 .avatar-frame {
-    width: 280px;
-    height: 330px;
-    background-color: var(--accent-purple);
+    width: 330px;
+    height: 360px;
+    background-color: white;
     border-radius: 100px 100px 70px 70px;
     overflow: hidden;
     padding: 12px;
