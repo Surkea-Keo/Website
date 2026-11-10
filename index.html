@@ -14,21 +14,33 @@
     <link rel="icon" href="logopages.png" type="image/x-icon">
 </head>
 <body>
+    <!-- loading screen -->
+    <div id="loading-screen">
+        <div class="progress-box">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="counter" id="loading-counter">0%</div>
+    </div>
+
+    <!-- Floating Navigation -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#hero-header"><i class="fas fa-home"></i> <span>Home</span></a></li>
+            <li><a href="#travel"><i class="fas fa-biking"></i> <span>Travel</span></a></li>
+            <li><a href="#space"><i class="fas fa-rocket"></i> <span>Space</span></a></li>
+            <li><a href="#faq"><i class="fas fa-question-circle"></i> <span>FAQ</span></a></li>
+            <li><a href="#contact"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+    </nav>
 
     <!-- Header & Hero Section -->
     <header id="hero-header" class="hero-header">
         <div class="grid-background"></div>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="#hero-header">HOME</a></li>
-                <li><a href="#travel">TRAVEL</a></li>
-                <li><a href="#space">SPACE</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-            </ul>
-            <div class="logo">&lt;website&gt;Surkea&lt;/website&gt;</div>
-        </nav>
 
+        <section class="logo">
+            <div>&lt;website&gt;Surkea&lt;/website&gt;</div>
+        </section>
+        
         <section id="home" class="hero-content">
             <div class="hero-text">
                 <h2 class="sub-heading">I'm</h2>
@@ -62,7 +74,7 @@
     <!-- Travel / Cycling Section -->
     <section id="travel" class="travel-section">
         <div class="container">
-            <h2 class="section-heading">&lt;/Travel & Adventures&gt;</h2>
+            <h2 class="section-heading"><i class="fas fa-compass"></i> Travel & Adventures</h2>
 
             <div class="travel-card">
                 <div class="travel-img-wrapper">
@@ -87,7 +99,7 @@
     <!-- Space & NASA Certifications Section -->
     <section id="space" class="travel-section">
         <div class="container">
-            <h2 class="section-heading">&lt;/NASA Space Missions&gt;</h2>
+            <h2 class="section-heading"><i class="fas fa-user-astronaut"></i> NASA Space Missions</h2>
 
             <div class="travel-card">
                 <div class="travel-img-wrapper">
@@ -121,7 +133,7 @@
     <!-- FAQ Section -->
     <section id="faq" class="faq-section">
         <div class="container">
-            <h2 class="section-heading">&lt;/Frequently asked question&gt;</h2>
+            <h2 class="section-heading"><i class="fas fa-question-circle"></i> Frequently asked question</h2>
 
             <div class="faq-accordion">
                 <div class="faq-item">
@@ -130,7 +142,7 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>It feels great and empowering to have a personal corner on the web to showcase my journey, projects, and adventures! +99999999aura</p>
+                        <p>It feels great to build a personal space on the web to document projects, cycling journeys, and astronomy milestones! 🚀</p>
                     </div>
                 </div>
 
@@ -140,17 +152,17 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>I designed and coded it using HTML5, CSS3 for custom styling, and JavaScript for dynamic interactions and Gemini.</p>
+                        <p>Built with clean HTML5, custom Claymorphism CSS3 styling, vanilla JavaScript, and modern layout practices.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Are you a freelancer?</span>
+                        <span>Are you available for freelance projects?</span>
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>No, I'm just making it for my personal use.</p>
+                        <p>Currently, I am focusing on personal learning, coding practice, and personal software builds.</p>
                     </div>
                 </div>
 
@@ -160,7 +172,7 @@
                         <div class="faq-icon"><i class="fas fa-chevron-down"></i></div>
                     </button>
                     <div class="faq-answer">
-                        <p>No, it takes a lot of time to make it</p>
+                        <p>Not right now, as custom web engineering requires dedicated time and resources.</p>
                     </div>
                 </div>
             </div>
@@ -171,7 +183,10 @@
     <footer id="contact" class="footer">
         <div class="container">
             <p class="contact-me">Contact me</p>
-            <a class="email-address" href="mailto:info.surkea@gmail.com">info.surkea@gmail.com</a> 
+            <p class="contact-sub">Feel free to reach out for tech discussions or space chats! 🚀</p>
+            <a class="email-address" href="mailto:info.surkea@gmail.com">
+                <i class="fas fa-envelope"></i> info.surkea@gmail.com
+            </a>
             <div class="social-icons footer-socials">
                 <a href="https://www.instagram.com/surkea.keo/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.facebook.com/Surkea.keo" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -183,13 +198,6 @@
         </div>
     </footer>
 
-    <div id="loading-screen">
-        <div class="progress-box">
-            <div class="progress-bar" id="progress-bar"></div>
-        </div>
-        <div class="counter" id="loading-counter">0%</div>
-    </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
